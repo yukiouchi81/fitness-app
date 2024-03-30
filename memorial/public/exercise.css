@@ -1,0 +1,143 @@
+body{
+  min-width:960px;
+  font-family: sans-serif;
+  height: 100vh;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+.nav_items{
+  list-style: none;
+  width: 100%;
+  align-items: center;
+  background: rgba(255, 255, 255, 1);
+  padding: 30px 20px;
+}
+.nav_items li{
+  display: inline-block;
+  padding: 0px 10px;
+}
+#logo{
+  cursor: pointer;
+  float: left;
+}
+.nav_items ul{
+  list-style-type: none;
+  padding:0;
+  margin:0;
+  display: block;
+  overflow: hidden;
+  font-size: 20px;
+  text-align: center;
+}
+
+.nav_items li a{
+  transition: all 0.3s ease 0s;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding:10px;
+  display: block;
+  text-align: center;
+  border-bottom: 2px solid transparent; /* Red underline */  
+
+}
+.nav_items li a:hover{
+  cursor: pointer;
+  border-bottom: 2px solid red; /* Red underline */  
+}
+
+button {
+  padding: 9px 25px;
+  background-color: transparent;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  border-bottom: 2px solid transparent; /* Red underline */  
+}
+button:hover{
+  border-bottom: 2px solid red; /* Red underline */  
+}
+
+/*footer*/
+footer{
+  background:linear-gradient(to right,#ac6767,#391212);
+  width: 100%;
+  color: #fff;
+  padding: 100px 0 30px;
+  font-size: 12px;
+  position: absolute;
+}
+.row{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.col{
+  flex-basis: 25%;
+  padding:10px;
+}
+.col h3{
+  width: fit-content;
+  margin-bottom: 20px;
+  position: relative;
+}
+.col #para{
+  margin-bottom: 10px;
+}
+.col #contact{
+  margin-bottom: 5px;
+}
+.col a{
+  text-decoration: none;
+  color: #fff;
+}
+footer ul li{
+  list-style: none;
+  margin-bottom: 12px;
+}
+footer ul li a{
+  text-decoration:none;
+  color: #fff;
+}
+footer .description{
+  padding-right: 70px;
+}
+hr{
+  width: 90%;
+  border:0;
+  margin: 20px auto;
+  border-bottom: 1px solid #ccc;
+}
+.copyright{
+  text-align: center;
+}
+footer a:hover{
+  border-bottom: 2px solid #fff; /* Red underline */  
+}
+
+/*floor map*/
+.wrap{
+  width: 100%;
+  aspect-ratio: 14 / 6;
+}
+.wrap iframe{
+  width: 100%;
+  height: 100%;
+}
+hr{
+  width: 90%;
+  border:0;
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 1px solid #ccc;
+}

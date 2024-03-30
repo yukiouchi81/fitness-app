@@ -1,0 +1,190 @@
+body{
+  min-width:960px;
+  font-family: sans-serif;
+  height: 100vh;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+.nav_items{
+  list-style: none;
+  width: 100%;
+  align-items: center;
+  background: rgba(255, 255, 255, 1);
+  padding: 30px 20px;
+}
+.nav_items li{
+  display: inline-block;
+  padding: 0px 10px;
+}
+#logo{
+  cursor: pointer;
+  float: left;
+}
+.nav_items ul{
+  list-style-type: none;
+  padding:0;
+  margin:0;
+  display: block;
+  overflow: hidden;
+  font-size: 20px;
+  text-align: center;
+}
+
+.nav_items li a{
+  transition: all 0.3s ease 0s;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding:10px;
+  display: block;
+  text-align: center;
+  border-bottom: 2px solid transparent; /* Red underline */  
+}
+
+.nav_items li a:hover{
+  cursor: pointer;
+  border-bottom: 2px solid red; /* Red underline */  
+}
+
+button {
+  padding: 9px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  border-bottom: 2px solid transparent; /* Red underline */  
+}
+button:hover{
+  border-bottom: 2px solid red; /* Red underline */  
+}
+
+/*_______________________________________________________________________________________________________________*/
+/*Upper part of main*/
+.upper{
+  color: rgb(0, 0, 0);
+  position: relative;
+  text-align: center;
+  padding-top: 200px;
+  height: 80vh;
+  &::before{
+    content: '';
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom: 0;
+    background-image:url("images/heading.png");
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.5;
+  }
+}
+.upper h1{
+  position: relative;
+  font-size: 70px;
+}
+.upper p{
+  position: relative;
+}
+.upper button{
+  position: relative;
+  background-color: black;
+  color: aliceblue;
+  margin-top: 30px;
+  padding: 20px 30px;
+  border-radius: 0;
+}
+/*_______________________________________________________________________________________________________________*/
+/*Workout part in main*/
+.flex-container{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 70px 500px;
+  padding-bottom: 500px;
+}
+.flex-container img{
+  width:400px;
+  height:320px;
+  opacity: 0.8;
+}
+.middle h1{
+  padding-top: 400px;
+  text-align: center;
+}
+
+/*footer*/
+footer{
+  background:linear-gradient(to right,#ac6767,#391212);
+  width: 100%;
+  color: #fff;
+  padding: 100px 0 30px;
+  font-size: 12px;
+  position: absolute;
+}
+.row{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.col{
+  flex-basis: 25%;
+  padding:10px;
+}
+.col h3{
+  width: fit-content;
+  margin-bottom: 20px;
+  position: relative;
+}
+.col #para{
+  margin-bottom: 10px;
+}
+.col #contact{
+  margin-bottom: 5px;
+}
+.col a{
+  text-decoration: none;
+  color: #fff;
+}
+footer ul li{
+  list-style: none;
+  margin-bottom: 12px;
+}
+footer ul li a{
+  text-decoration:none;
+  color: #fff;
+}
+footer .description{
+  padding-right: 70px;
+}
+hr{
+  width: 90%;
+  border:0;
+  margin: 20px auto;
+  border-bottom: 1px solid #ccc;
+}
+.copyright{
+  text-align: center;
+}
+footer a:hover{
+  border-bottom: 2px solid #fff; /* Red underline */  
+}
+
+/*floor map*/
+.wrap{
+  width: 100%;
+  aspect-ratio: 14 / 6;
+}
+.wrap iframe{
+  width: 100%;
+  height: 100%;
+}
