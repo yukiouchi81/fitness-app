@@ -1,6 +1,5 @@
 import csv
 import os
-import numpy as np
 import requests
 from bs4 import BeautifulSoup
 import credentials
@@ -15,27 +14,9 @@ payload = {
     "submit" : "Login"
 }
 
-"""The other way of sending payload to make sure we are not sharing credentials in same code is:
-First create a new python file "credentials.py" and write these two lines in that file:
-    username = ""salvatm@plattsburgh.edu"
-    password = "Salvatore1"
-    
-And save it in the same folder as this main python code.
-Now in this main code file do:
-
-import credentials
-And make changes to payload dictionary as shown below. 
-payload = {
-    "email": credentials.username
-    "password" : credentials.password
-    "submit" : login
-}
-
-"""
-
 #send requests to the website with credential and then goes to history website
 with requests.session() as s:
-    s.post(loginurl , data =payload)
+    s.post(loginurl , data = payload)
     r = s.get(secure_url)
     soup = BeautifulSoup(r.content, "html.parser")
     # The below two list contains elements with the class history_name and history_date.
@@ -60,16 +41,11 @@ with requests.session() as s:
 combined_list = [[name, date, time] for name, date, time in zip(item_name, date_list, time_list) if name.strip()]
 print(combined_list)
 
-#Write to CSV using numpy
-np.savetxt("dataNumpy.csv",combined_list,delimiter =", ",
-fmt ='%s')
 
 #Write to CSV using CSV reader
 fields = ["name", "date","time"]
 
-#with open('dataCsv.csv', "w", newline='') as f:
-#    pass 
-directory = "/Users/yukiouchi/Documents/Github/memorial/my-app"
+directory = "/Users/yukiouchi/Documents/Github/fitness-app/memorial/public/data"
 file = "dataCsv.csv"
 file_path = os.path.join(directory,file)
 
@@ -81,4 +57,4 @@ f.close()
 
  
 
-    
+#initially this code was returninghtml element like "<tr><td class="history_date">"2024-04-02 13:24"</td><td class="history_name">"Sumeet Vish"</td></tr>"
