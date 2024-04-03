@@ -5,243 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekly To-Do List</title>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?cs=srgb&dl=pexels-leon-ardho-1552252.jpg&fm=jpg');
-            background-size: cover;
-            background-repeat: repeat;
-            background-position: center;
-        }
-        /*Header*/
-        header{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 10%;
-            background-color: rgb(255, 255, 255);
-            font-size: 20px;
-          }
-          .nav_items{
-            list-style: none;
-            width: 100%;
-            align-items: center;
-            background: rgba(255, 255, 255, 1);
-            padding: 30px 20px;
-          }
-          .nav_items li{
-            display: inline-block;
-            padding: 0px 10px;
-          }
-          #logo{
-            cursor: pointer;
-            float: left;
-          }
-          .nav_items ul{
-            list-style-type: none;
-            padding:0;
-            margin:0;
-            display: block;
-            overflow: hidden;
-            font-size: 20px;
-            text-align: center;
-          }
-          
-          .nav_items li a{
-            transition: all 0.3s ease 0s;
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            padding:10px;
-            display: block;
-            text-align: center;
-            border-bottom: 2px solid transparent; /* Red underline */  
-          
-          }
-          .nav_items li a:hover{
-            cursor: pointer;
-            border-bottom: 2px solid red; /* Red underline */  
-          }
-          
-          button {
-            padding: 9px 25px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease 0s;
-            border-bottom: 2px solid transparent; /* Red underline */  
-            font-size: 20px;
-            background-color: transparent;
-          }
-          
-          button:hover{
-            border-bottom: 2px solid red; /* Red underline */  
-          }
-
-        /*footer*/
-        footer{
-            background:linear-gradient(to right,#ac6767,#391212);
-            width: 100%;
-            color: #fff;
-            padding: 100px 0 30px;
-            font-size: 12px;
-            position: absolute;
-          }
-          .row{
-            width: 85%;
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            justify-content: space-between;
-          }
-          .col{
-            flex-basis: 25%;
-            padding:10px;
-          }
-          .col h3{
-            width: fit-content;
-            margin-bottom: 20px;
-            position: relative;
-          }
-          .col a{
-            text-decoration: none;
-            color: #fff;
-          }
-          footer ul li{
-            list-style: none;
-            margin-bottom: 12px;
-          }
-          footer ul li a{
-            text-decoration:none;
-            color: #fff;
-          }
-          footer .description{
-            padding-right: 70px;
-          }
-          hr{
-            width: 90%;
-            border:0;
-            margin: 20px auto;
-            border-bottom: 1px solid #ffffff;
-          }
-          .copyright{
-            text-align: center;
-          }
-          footer a:hover{
-            border-bottom: 2px solid #fff; /* Red underline */  
-          }
-        /*Main*/          
-        .wrapper {
-            background:linear-gradient(to right,#ac6767,#391212);
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .planner-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-        table {
-            width: 90%;
-            max-width: 1200px;
-            border-collapse: collapse;
-            background-color: #fff;
-        }
-        th, td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .multiline-input {
-            width: 100%;
-            height: 100%;
-            box-sizing: border-box;
-        }
-        .content-container {
-            background-color: rgba(255, 200, 200, 0.2); /* Very light red background color */
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .column-wrapper {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-        
-        .column {
-            width: 40%; /* Adjust the width as needed */
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-        
-        .dropdown {
-            width: calc(100% - 20px); /* Adjust for padding */
-            padding: 8px;
-            margin-bottom: 10px;
-        }
-        .submit-button {
-            width: 80px; /* Adjust width as needed */
-            height: 25px; /* Adjust height as needed */
-            font-size: 18px; /* Adjust font size as needed */
-            margin: 0 auto; /* Center horizontally */
-            display: block;
-        }        
-        #stats-column {
-            width: 40%;
-            max-width: 1200px;
-            background-color: #f2f2f2;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        #stats-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        #target{
-          border:lightslategray solid 1px;
-          border-radius: 5px;
-          text-align: center;
-          min-width: 90%;
-        }
-        #target:hover{
-          background-color:#fbfbfb;
-        }
-        #current-weight{
-          border:lightslategray solid 1px;
-          border-radius: 5px;
-
-        }
-        #current-height{
-          border:lightslategray solid 1px;
-          border-radius: 5px;
-
-        }
-        #experience-level.dropdown{
-          border:lightslategray solid 1px;
-          border-radius: 5px;
-          padding:0;
-          text-align: center;
-        }
-        #experience-level.dropdown:hover{
-          background-color:#fafafa;
-        }
-        h2{
-          text-align: center;
-          padding-bottom: 10px;
-        }
-    </style>
-</head>
+    <link rel="stylesheet" href="personal_content.css">
+<head>
+<!--Header Don't Touch This-->
 <body>
     <header>
         <a href="index.html"><img src="images/logo.png" alt="logo" id="logo"></a>
@@ -255,14 +21,15 @@
         </nav>
         <a href="Signupindex.html" class="lonin"><button>Login</button></a>
     </header>
-
+<!--Main Page personal_content-->
     <main>
+<!--Title Name-->
     <div class="wrapper">
         <marquee>
         <h1>WorkOut Planner</h1>
         </marquee>
     </div>
-
+<!--Weekly To-Do-->
     <div class="planner-container">
         <table>
             <tr>
@@ -284,51 +51,62 @@
                 <td><textarea class="multiline-input" rows="10"></textarea></td>
             </tr>
         </table>
-    </div>
+    </div> 
+    
+ 
+<!--Problem-->
+<div class="content-container">
+    <div class="column-wrapper">
 
-    <div class="content-container">
-        <div class="column-wrapper">
-            <div class="column">
-                <h2>Target</h2>
-                <select id="target">
-                <option value="Getting Fit"></option>
+        <div class="column">
+            <h2>Target</h2><br>
+            <label for="target">What's the Target you wanna set?</label>
+            <select name="target" id="target"><br><br>
                 <option value="Getting Fit">Getting Fit</option>
                 <option value="Getting Stronger">Getting Stronger</option>
                 <option value="Staying Active">Staying Active</option>
                 <option value="Flexible">Flexible</option>
                 <option value="Endurance">Endurance</option>
-                </select>
-            </div>
-            <div class="column">
-                <h2>Stats</h2>
-                <label for="current-weight">Current Weight:</label>
-                <input type="number" id="current-weight" min="0" max="999">
-                <select id="weight-unit" class="dropdown">
+            </select>
+        </div>
+
+        <div class="column">
+            <h2>Stats</h2>
+            <label for="current-weight">Current Weight:</label>
+            <input type="number" id="current-weight" min="0" max="999">
+            <select id="weight-unit" class="dropdown">
                 <option value="pounds">Pounds</option>
                 <option value="kilograms">Kilograms</option>
-                </select><br><br>
-                <label for="current-height">Current Height:</label>
-                <input type="number" id="current-height" min="0" max="999">
-                <select id="height-unit" class="dropdown">
-                <option value="centimeters">Centimeters</option>
+            </select><br><br>
+            <label for="current-height">Current Height:</label>
+            <input type="number" id="current-height" min="0" max="999">
+            <select id="height-unit" class="dropdown"> 
                 <option value="feet">Feet</option>
-                </select><br><br>
-                <label for="experience-level">Experience Level:</label>
-                <select id="experience-level" class="dropdown">
-                <option value="beginner"></option>
+                <option value="centimeters">Centimeters</option>
+            </select><br><br>
+            <label for="experience-level">Experience Level:</label>
+            <select id="experience-level" class="dropdown">
                 <option value="beginner">Beginner</option>
                 <option value="intermediate">Intermediate</option>
                 <option value="advanced">Advanced</option>
-                </select>
-            </div>
-        </div>
-        <div id="stats-column" class="column">
-            <h2>Summary</h2>
-            <ul id="stats-list"></ul>
-            <input type="submit" value="Save" class="submit-button">
+            </select><br><br>
+            <label for="gender">Gender:</label>
+            <select id="gender" class="dropdown">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+            </select>
         </div>
     </div>
-    
+    <!--Review-->
+    <div id="stats-column" class="column">
+        <h2>Summary</h2> <br> 
+        <ul id="summarylist"></ul>
+        <button id="savebutton" onclick="addStat()" class="submit-button">Save</button>
+    </div>
+</div>
+
+<!--Footer Don't Touch This-->
     </main>
     <footer>
       <div class="row">
@@ -374,95 +152,110 @@
       <hr>
       <p class="copyright">Cardinal Fitness Hub @2023 - All Rights Reserved </p>
     </footer>
+    
+<!-- Your JS-->
+<script>
+  //Weekly table 
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to save workout planner data to local storage
+    function saveWorkoutPlannerData() {
+        var workoutData = {};
+        var textareas = document.querySelectorAll('.multiline-input');
+        textareas.forEach(function(textarea, index) {
+            workoutData['day_' + (index + 1)] = textarea.value;
+        });
+        localStorage.setItem('workoutData', JSON.stringify(workoutData));
+    }
 
-        <script>
-            var currentWeight = "";
-            var weightUnit = "";
-            var currentHeight = "";
-            var heightUnit = "";
-            var experienceLevel = "";
-            var target = "";
-
-            document.getElementById('target').addEventListener('change', function() {
-                target = "Target: " + this.value;
-                updateStats();
-            });
-
-            document.getElementById('current-weight').addEventListener('input', function() {
-                currentWeight = "Current Weight: " + this.value + " " + weightUnit;
-                updateStats();
-            });
-
-            document.getElementById('weight-unit').addEventListener('change', function() {
-                weightUnit = this.value;
-                updateStats();
-            });
-
-            document.getElementById('current-height').addEventListener('input', function() {
-                currentHeight = "Current Height: " + this.value + " " + heightUnit;
-                updateStats();
-            });
-
-            document.getElementById('height-unit').addEventListener('change', function() {
-                heightUnit = this.value;
-                updateStats();
-            });
-
-            document.getElementById('experience-level').addEventListener('change', function() {
-                experienceLevel = "Experience Level: " + this.value;
-                updateStats();
-            });
-
-        function updateStats() {
-            var statsList = document.getElementById('stats-list');
-            statsList.innerHTML = ''; // Clear previous stats
-            // Add each stat to the list
-            var stats = [target, currentWeight, currentHeight, experienceLevel];
-            stats.forEach(function(stat) {
-                if (stat.trim() !== "") {
-                    var listItem = document.createElement('li');
-                    listItem.textContent = stat;
-                    statsList.appendChild(listItem);
+    // Function to load workout planner data from local storage
+    function loadWorkoutPlannerData() {
+        var storedData = localStorage.getItem('workoutData');
+        if (storedData) {
+            var workoutData = JSON.parse(storedData);
+            var textareas = document.querySelectorAll('.multiline-input');
+            textareas.forEach(function(textarea, index) {
+                if (workoutData['day_' + (index + 1)]) {
+                    textarea.value = workoutData['day_' + (index + 1)];
                 }
             });
         }
-        </script>
-        <script>
-            // Function to save the content of the weekly to-do list to local storage
-            function saveWeeklyToDos() {
-                var weeklyToDos = {}; // Initialize an object to store the content of each day
-        
-                // Loop through each textarea and store its content
-                document.querySelectorAll('.multiline-input').forEach(function(textarea, index) {
-                    weeklyToDos['day_' + (index + 1)] = textarea.value;
-                });
-        
-                // Save the weekly to-do list to local storage
-                localStorage.setItem('weeklyToDos', JSON.stringify(weeklyToDos));
+    }
+
+    // Save workout planner data to local storage when text is inputted
+    var textareas = document.querySelectorAll('.multiline-input');
+    textareas.forEach(function(textarea) {
+        textarea.addEventListener('input', saveWorkoutPlannerData);
+    });
+
+    // Load data when the page is loaded
+    loadWorkoutPlannerData();
+});
+
+  //This is for the Target Stat and Summary 
+  document.addEventListener('DOMContentLoaded', function() {
+    var currentWeight = "";
+    var weightUnit = "";
+    var currentHeight = "";
+    var heightUnit = "";
+    var experienceLevel = "";
+    var target = "";
+    var gender = "";
+
+    // Function to update summary with user input
+    function updateSummary() {
+        var summaryList = document.getElementById('summarylist');
+        summaryList.innerHTML = ''; // Clear previous summary
+        // Add each stat to the summary list
+        var stats = [target, currentWeight, currentHeight, experienceLevel, gender];
+        stats.forEach(function(stat) {
+            if (stat.trim() !== "") {
+                var listItem = document.createElement('li');
+                listItem.textContent = stat;
+                summaryList.appendChild(listItem);
             }
-        
-            // Function to load the content of the weekly to-do list from local storage
-            function loadWeeklyToDos() {
-                var weeklyToDosJSON = localStorage.getItem('weeklyToDos');
-                if (weeklyToDosJSON) {
-                    var weeklyToDos = JSON.parse(weeklyToDosJSON);
-        
-                    // Loop through each day and populate the corresponding textarea with its content
-                    Object.keys(weeklyToDos).forEach(function(day, index) {
-                        document.querySelector('#' + day).value = weeklyToDos[day];
-                    });
-                }
-            }
-        
-            // Event listener for the "Save" button
-            document.querySelector('.submit-button').addEventListener('click', function() {
-                saveWeeklyToDos();
-            });
-        
-            // Load the content of the weekly to-do list when the page loads
-            document.addEventListener('DOMContentLoaded', function() {
-                loadWeeklyToDos();
-            });
-        </script>
-        
+        });
+    }
+
+    // Save button event listener
+    document.getElementById('savebutton').addEventListener('click', function() {
+        // Get user input
+        target = "Target: " + document.getElementById('target').value;
+        currentWeight = "Current Weight: " + document.getElementById('current-weight').value + " " + document.getElementById('weight-unit').value;
+        currentHeight = "Current Height: " + document.getElementById('current-height').value + " " + document.getElementById('height-unit').value;
+        experienceLevel = "Experience Level: " + document.getElementById('experience-level').value;
+        gender = "Gender: " + document.getElementById('gender').value;
+
+        // Update summary with user input
+        updateSummary();
+
+        // Save data to local storage
+        var userData = {
+            target: target,
+            currentWeight: currentWeight,
+            currentHeight: currentHeight,
+            experienceLevel: experienceLevel,
+            gender: gender
+        };
+        localStorage.setItem('userData', JSON.stringify(userData));
+    });
+
+    // Function to load data from local storage
+    function loadDataFromLocalStorage() {
+        var userData = JSON.parse(localStorage.getItem('userData'));
+        if (userData) {
+            target = userData.target;
+            currentWeight = userData.currentWeight;
+            currentHeight = userData.currentHeight;
+            experienceLevel = userData.experienceLevel;
+            gender = userData.gender;
+            // Update summary with loaded data
+            updateSummary();
+        }
+    }
+
+    // Load data when the page is loaded
+    loadDataFromLocalStorage();
+});
+
+</script>
 </body>
