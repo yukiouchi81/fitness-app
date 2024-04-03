@@ -115,7 +115,6 @@ footer .description{
 hr{
   width: 90%;
   border:0;
-  margin: 20px auto;
   border-bottom: 1px solid #ccc;
 }
 .copyright{
@@ -128,7 +127,7 @@ footer a:hover{
 /*floor map*/
 .wrap{
   width: 100%;
-  aspect-ratio: 14 / 6;
+  aspect-ratio: 14 / 5;
 }
 .wrap iframe{
   width: 100%;
@@ -138,9 +137,7 @@ footer a:hover{
 /*floor map*/
 .wrap{
   width: 100%;
-  aspect-ratio: 14 / 6;
   margin: 40px 0;
-
 }
 .wrap iframe{
   width: 100%;
