@@ -17,6 +17,8 @@ header{
   align-items: center;
   background: rgba(255, 255, 255, 1);
   padding: 30px 20px;
+  margin-top: 5px;
+
 }
 .nav_items li{
   display: inline-block;
