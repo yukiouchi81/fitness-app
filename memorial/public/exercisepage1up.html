@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+
+body{
+  min-width:960px;
+  font-family: sans-serif;
+  height: 100vh;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+.nav_items{
+  list-style: none;
+  width: 100%;
+  align-items: center;
+  background: rgba(255, 255, 255, 1);
+  padding: 30px 20px;
+}
+.nav_items li{
+  display: inline-block;
+  padding: 0px 10px;
+}
+#logo{
+  cursor: pointer;
+  width: 150px;
+}
+.nav_items ul{
+  list-style-type: none;
+  padding:0;
+  margin:0;
+  display: block;
+  overflow: hidden;
+  font-size: 20px;
+  text-align: center;
+}
+
+.nav_items li a{
+  transition: all 0.3s ease 0s;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding:10px;
+  display: block;
+  text-align: center;
+  border-bottom: 2px solid transparent; /* Red underline */  
+
+}
+.nav_items li a:hover{
+  cursor: pointer;
+  border-bottom: 2px solid red; /* Red underline */  
+}
+
+button {
+  padding: 9px 25px;
+  background-color: transparent;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  border-bottom: 2px solid transparent; /* Red underline */  
+}
+button:hover{
+  border-bottom: 2px solid red; /* Red underline */  
+}
+
+/*footer*/
+footer{
+  background:linear-gradient(to right,#ac6767,#391212);
+  width: 100%;
+  color: #fff;
+  padding: 100px 0 30px;
+  font-size: 12px;
+  position: absolute;
+}
+.row{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.col{
+  flex-basis: 25%;
+  padding:10px;
+}
+.col h3{
+  width: fit-content;
+  margin-bottom: 20px;
+  position: relative;
+}
+.col #para{
+  margin-bottom: 10px;
+}
+.col #contact{
+  margin-bottom: 5px;
+}
+.col a{
+  text-decoration: none;
+  color: #fff;
+}
+footer ul li{
+  list-style: none;
+  margin-bottom: 12px;
+}
+footer ul li a{
+  text-decoration:none;
+  color: #fff;
+}
+footer .description{
+  padding-right: 70px;
+}
+hr{
+  width: 90%;
+  border:0;
+  margin: 20px auto;
+  border-bottom: 1px solid #ccc;
+}
+.copyright{
+  text-align: center;
+}
+footer a:hover{
+  border-bottom: 2px solid #fff; /* Red underline */  
+}
+
+/*floor map*/
+.wrap{
+  width: 100%;
+  aspect-ratio: 14 / 6;
+}
+.wrap iframe{
+  width: 100%;
+  height: 100%;
+}
+hr{
+  width: 90%;
+  border:0;
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 1px solid #ccc;
+}
+
+/**/
+.box1 {
+  color: white;
+  background-image: url(img/bg2.jpg);
+  font-weight: bold;
+  font-style: italic;
+  padding: 120px;
+  font-size: 40px;
+  width: 300px;
+  margin: 20px;
+  text-align: center;
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  margin: auto;
+  width: 70%;
+  border: grey;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.box2 {
+  background-color: black;
+  background-image: url(img/upper.jpg);
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+  padding: 120px;
+  font-size: 40px;
+  width: 300px;
+  margin: 20px;
+  text-align: center;
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+  width: 70%;
+  border: grey;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+a:link {
+  color: blue; 
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: grey;
+}
+
+a:active {
+  color: white;
+}
+
+h1 {
+  color: rgb(85, 84, 84);
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+
+.box1:hover,
+.box2:hover {
+  transform: translateY(-5px);
+}
+
+.box1:hover,
+.box2:hover {
+  transition: transform 0.3s ease;
+}
+
+</style>
+
+</head>    
+<body>
+    <header>
+        <a href="index.html"><img src="img/logo.png" alt="logo" id="logo"></a>
+        <nav>
+          <ul class="nav_items">
+            <li><a href="#">Crowd Meter</a></li>
+            <li><a href="floormap.html">Floor Map</a></li>
+            <li><a href="personal_content.html">Personal Contents</a></li>
+            <li><a href="#">Exercises</a></li>
+          </ul>
+        </nav>
+        <a href="Signupindex.html" class="lonin"><button>Login</button></a>
+    </header>
+
+    <main>
+      <h1>Choose your target area for today!</h1>
+        <div class="container">
+            <div class="box1">
+              <a href="upper.html">Upper</a>
+            </div>
+            <div class="box2">
+              <a href="lower.html">Lower</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+      <div class="row">
+        <div class="col">
+          <h3>Cardinal Fitness Hub</h3>
+          <p class="description">
+            Cardinal Fitness Hub is developed as part of a team project at SUNY Plattsburgh. 
+            The team worked on design, programming, and content creation. 
+            The website aims to provide 00000. 
+          </p>
+        </div>
+        <div class="col">
+          <h3>Memorial Gym</h3>
+          <h4>Hours of Operation</h4>
+          <p>Monday - Friday: 7am - 10pm</p>
+          <p id="para">Saturday - Sunday: 12pm - 9pm</p>
+          <h4>Location</h4>
+          <p >110 Memorial Hall</p>
+          <p id="para">Plattsburgh, NY, 12901</p>
+          <h4>Contact</h4>
+          <ul>
+            <li id="contact"><a href = "mailto: mailtosalvatm@plattsburgh.edu" class="email">mailtosalvatm@plattsburgh.edu</a>
+            </li>
+            <li ><a href="tel:518-564-3142">518-564-3142</a></li>
+          </ul>
+          <h4>Social Media</h4>
+          <a href="https://www.instagram.com/plattsfitness?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram<i class="fa-brands fa-instagram"> </i></a>
+        </div>
+        <div class="col">
+          <h3>Browse</h3>
+          <ul>
+            <li><a href="">Crowd Meter</a></li>
+            <li><a href="floormap.html">Floor Map</a></li>
+            <li><a href="#">Exercises</a></li>
+            <li><a href="">Personal Contents</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Useful Links</h3>
+          <ul>
+            <li><a href="https://www.plattsburgh.edu/athletics/recreational/fitness-center/" target="_blank">Fitness Center</a></li>
+            <li><a href="https://www.plattsburgh.edu/athletics/recreational/fitness-center/schedules.html" target="_blank">Group excersice schedule</a></li>
+            <li><a href="#">Link3</a></li>
+            <li><a href="#">Link4</a></li>
+            <li><a href="#">Link5</a></li>            
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <p class="copyright">Cardinal Fitness Hub @2023 - All Rights Reserved </p>
+    </footer>
+    <script>
+      function showAlert(area) {
+          alert("You selected " + area);
+      }
+      </script>
+  </body>
+
+</html>
