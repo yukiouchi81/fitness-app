@@ -64,7 +64,7 @@ body {
     border-bottom: 2px solid red; /* Red underline */  
   }
   
-  button {
+  #a {
     padding: 9px 25px;
     border: none;
     border-radius: 50px;
@@ -207,3 +207,40 @@ body {
     padding: 0;
   }
   
+  #target{
+    border: 1px rgb(175, 174, 174) solid;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    margin-top: 20px;
+  }
+  h2{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .column{
+    min-height: 300px;
+    min-width:400px;
+    text-align: center;
+  }
+  .column li{
+    list-style: none;
+    padding: 5px;
+  }
+  #savebutton{
+    border: #262525 1px solid;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  #savebutton:hover{
+    background-color: #f3f3f3;
+}
+
+.dropdown, input{
+  border: #aeadad 1px solid;
+  border-radius: 10px;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+}

@@ -19,7 +19,7 @@
             <li><a href="personal_content.html">Personal Contents</a></li>
           </ul>
         </nav>
-        <a href="Signupindex.html" class="lonin"><button>Login</button></a>
+        <a href="Signupindex.html" class="lonin"><button id="a">Login</button></a>
     </header>
 <!--Main Page personal_content-->
     <main>
@@ -34,13 +34,7 @@
     <div class="planner-container">
         <table>
             <tr>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednesday</th>
-                <th>Thursday</th>
-                <th>Friday</th>
-                <th>Saturday</th>
-                <th>Sunday</th>
+                <th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th><th>Sunday</th>
             </tr>
             <tr>
                 <td><textarea class="multiline-input" rows="10" font="TimesNewRoman"></textarea></td>
@@ -53,16 +47,14 @@
             </tr>
         </table>
     </div> 
-    
- 
 <!--Problem-->
 <div class="content-container">
     <div class="column-wrapper">
 
         <div class="column">
-            <h2>Target</h2><br>
-            <label for="target">What's the Target you wanna set?</label>
-            <select name="target" id="target"><br><br>
+            <h2>Target</h2>
+            <label for="target">What is your fitness goal?</label>
+            <select name="target" id="target">
                 <option value="Getting Fit">Getting Fit</option>
                 <option value="Getting Stronger">Getting Stronger</option>
                 <option value="Staying Active">Staying Active</option>
@@ -227,7 +219,7 @@
     // Save button event listener
     document.getElementById('savebutton').addEventListener('click', function() {
         // Get user input
-        target = "Target: " + document.getElementById('target').value;
+        target = "Goal: " + document.getElementById('target').value;
         currentWeight = "Current Weight: " + document.getElementById('current-weight').value + " " + document.getElementById('weight-unit').value;
         currentHeight = "Current Height: " + document.getElementById('current-height').value + " " + document.getElementById('height-unit').value;
         experienceLevel = "Experience Level: " + document.getElementById('experience-level').value;
