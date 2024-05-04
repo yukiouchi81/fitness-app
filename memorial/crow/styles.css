@@ -1,0 +1,38 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  #crowdmeter-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  #crowdmeter {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 300px;
+    border: 1px solid #ccc;
+    position: relative;
+  }
+  
+  .bar {
+    width: 50px;
+    margin: 5px;
+    background-color: #333;
+  }
+  
+  .bar.current {
+    background-color: #ff69b4;
+  }
+  
+  .label {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 14px;
+  }
