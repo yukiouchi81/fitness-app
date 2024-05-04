@@ -7,29 +7,6 @@
   <title>Crowd Meter</title>
   <style>
     
-    #crowd-meter {
-      margin-top: 50px;
-      text-align: center;
-    }
-
-    #crowd-level {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    #meter-container {
-      width: 200px;
-      height: 20px;
-      background-color: #f0f0f0;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    #meter-bar {
-      height: 100%;
-      background-color: #4CAF50;
-      transition: width 0.5s ease;
-    }
     footer{
       background:linear-gradient(to right,#ac6767,#391212);
       width: 100%;
@@ -48,54 +25,51 @@
     }
 
     .col {
-    flex-basis: calc(25% - 20px);
-    padding: 0 10px;
+      flex-basis: calc(25% - 20px);
+      padding: 0 10px;
     }
 
     .col h3 {
-    margin-bottom: 20px;
+      margin-bottom: 20px;
     }
 
     .col p {
-    margin-bottom: 20px;
+      margin-bottom: 20px;
     }
 
     .col ul {
-    padding: 0;
-    margin: 0;
+      padding: 0;
+      margin: 0;
     }
 
     .col ul li {
-    list-style: none;
-    margin-bottom: 10px;
+      list-style: none;
+      margin-bottom: 10px;
     }
 
     .col ul li a {
-    color: #fff;
-    text-decoration: none;
+      color: #fff;
+      text-decoration: none;
     }
 
     .description {
-    max-width: 400px;
+      max-width: 400px;
     }
 
     .copyright {
-    text-align: center;
-  
+      text-align: center;
     }
     .spacer {
       height: 200px; 
     }
 
-  hr{
-    width: 90%;
-    border:0;
-    margin: 20px auto;
-    padding: 0;
-    border-bottom: 1px solid #ccc;
-  }
-
-
+    hr{
+      width: 90%;
+      border:0;
+      margin: 20px auto;
+      padding: 0;
+      border-bottom: 1px solid #ccc;
+    }
   </style>
 </head>
 <body>
@@ -104,18 +78,16 @@
     <a href="index.html"><img src="images/logo.png" alt="logo" id="logo"></a>
     <nav>
       <ul class="nav_items">
-        <li><a href="crowdmeter.html">Crowd Meter</a></li>
+        <li><a href="crowdmeter1.html">Crowd Meter</a></li>
         <li><a href="floormap.html">Floor Map</a></li>
         <li><a href="exercise.html">Exercises</a></li>
         <li><a href="personal_content.html">Personal Contents</a></li>
-
       </ul>
     </nav>
     <a href="Signupindex.html" class="lonin"><button>Login</button></a>
   </header>
   <hr>
 
-  
   <div id="crowd-meter">
     <h2>Crowd Meter</h2>
     <p id="crowd-level">Loading...</p>
@@ -145,8 +117,7 @@
         <p id="para">Plattsburgh, NY, 12901</p>
         <h4>Contact</h4>
         <ul>
-          <li id="contact"><a href = "mailto: mailtosalvatm@plattsburgh.edu" class="email">mailtosalvatm@plattsburgh.edu</a>
-          </li>
+          <li id="contact"><a href = "mailto: mailtosalvatm@plattsburgh.edu" class="email">mailtosalvatm@plattsburgh.edu</a></li>
           <li ><a href="tel:518-564-3142">518-564-3142</a></li>
         </ul>
         <h4>Social Media</h4>
@@ -174,48 +145,10 @@
     </div>
     <hr>
     <p class="copyright">Cardinal Fitness Hub @2023 - All Rights Reserved </p>
-  
   </footer>
-  <script>
-    // Function to fetch crowd data from the database
-    async function fetchCrowdData() {
-      try {
-        // Make an asynchronous request to fetch crowd data from the database
-        const response = await fetch('your_database_endpoint');
-        const data = await response.json(); // Assuming data is returned in JSON format
-        return data; // Return the fetched data
-      } catch (error) {
-        console.error('Error fetching crowd data:', error);
-        return null; // Return null in case of an error
-      }
-    }
+  
+  <!-- Adding the JavaScript file -->
+  <script src="crowdmeter.js"></script>
 
-    // Function to update the crowd meter with fetched data
-    async function updateCrowdMeter() {
-      const crowdLevel = document.getElementById('crowd-level');
-      const meterBar = document.getElementById('meter-bar');
-
-      crowdLevel.textContent = 'Loading...'; // Display loading message while fetching data
-
-      // Fetch crowd data
-      const crowdData = await fetchCrowdData();
-
-      // Check if crowdData is not null
-      if (crowdData !== null) {
-        // Assuming crowdData contains a 'level' property representing crowd level
-        crowdLevel.textContent = `Crowd Level: ${crowdData.level}`;
-
-        // Set the width of the meter bar based on the crowd level (adjust the calculation as needed)
-        meterBar.style.width = `${crowdData.level * 10}%`;
-      } else {
-        crowdLevel.textContent = 'Failed to fetch data. Please try again later.';
-      }
-    }
-
-    // Call updateCrowdMeter function when the page loads
-    window.onload = updateCrowdMeter;
-
-    
-  </script>
 </body>
 </html>
