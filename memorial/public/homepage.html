@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            min-width:960px;
+            font-family: sans-serif;
+            height: 100vh;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: rgb(255, 255, 255);
+            font-size: 20px;
+        }
+        .nav_items{
+            list-style: none;
+            width: 100%;
+            align-items: center;
+            background: rgba(255, 255, 255, 1);
+            padding: 30px 20px;
+        }
+        .nav_items li{
+            display: inline-block;
+            padding: 0px 10px;
+        }
+        #logo{
+            cursor: pointer;
+            float: left;
+        }
+        .nav_items ul{
+            list-style-type: none;
+            padding:0;
+            margin:0;
+            display: block;
+            overflow: hidden;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        .nav_items li a{
+            transition: all 0.3s ease 0s;
+            color: rgb(121, 119, 119);
+            text-decoration: none;
+            padding:10px;
+            display: block;
+            text-align: center;
+        }
+        .nav_items li a:hover{
+            color:rgb(0, 0, 0);
+            cursor: pointer;
+        }
+        
+        button {
+            padding: 9px 25px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+        }
+        
+        button:hover{
+            color: black;
+            background-color: aliceblue;
+        }
+        
+        .upper{
+            color: rgb(0, 0, 0);
+            position: relative;
+            text-align: center;
+            padding-top: 200px;
+            height: 80vh;
+            &::before{
+            content: '';
+            position: absolute;
+            top:0;
+            right:0;
+            left:0;
+            bottom: 0;
+            background-image:url("images/heading.png");
+            background-size: cover;
+            background-position: top center;
+            opacity: 0.5;
+            }
+        }
+        .upper h1{
+            position: relative;
+            font-size: 70px;
+        }
+        .upper p{
+            position: relative;
+        }
+        .upper button{
+            position: relative;
+            background-color: black;
+            color: aliceblue;
+            margin-top: 30px;
+            padding: 20px 30px;
+            border-radius: 0;
+        }
+    </style> 
+</head>
+<body>
+</body>
+</html>
