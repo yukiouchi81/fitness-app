@@ -91,12 +91,6 @@ footer{
   margin-bottom: 20px;
   position: relative;
 }
-.col #para{
-  margin-bottom: 10px;
-}
-.col #contact{
-  margin-bottom: 5px;
-}
 .col a{
   text-decoration: none;
   color: #fff;
@@ -116,7 +110,7 @@ hr{
   width: 90%;
   border:0;
   margin: 20px auto;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ffffff;
 }
 .copyright{
   text-align: center;
@@ -124,20 +118,118 @@ hr{
 footer a:hover{
   border-bottom: 2px solid #fff; /* Red underline */  
 }
-
-/*floor map*/
-.wrap{
-  width: 100%;
-  aspect-ratio: 14 / 6;
+/*Main*/ 
+/*/////////////////////////////////////////////////////////////////////////*/         
+.wrapper { /*Back gorund and Workout Planner Text*/
+  background:linear-gradient(to right,#ac6767,#391212);
+  color: white;
+  padding: 19px;
+  text-align: center;
 }
-.wrap iframe{
+.planner-container { /*Weekly Planner Page */
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+table {
+  width: 90%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+th {
+  background-color: #f2f2f2;
+}
+.multiline-input {
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px; 
 }
-hr{
-  width: 90%;
-  border:0;
-  margin: 0px;
-  padding: 0px;
-  border-bottom: 1px solid #ccc;
+/*Work Here*/
+.content-container {
+  background-color: rgba(255, 200, 200, 0.2); /* Very light red background color */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; 
+}
+.column-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px; 
+}
+.dropdown { 
+  display: inline-block; 
+  position: relative; 
+} 
+.column {
+  width: calc(45% - 10px); /* Adjust the width as needed */
+  background-color: #ffffff;
+  font-size: 20px;
+  padding: 20px 25px 20px 20px;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.submit-button {
+  width: 100px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+  font-size: 20px; /* Adjust font size as needed */
+  margin: auto; /* Center horizontally */
+  display: block;
+}        
+#stats-column {
+  padding: 43px;
+
+}
+#stats-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#target{
+  border: 1px rgb(175, 174, 174) solid;
+  border-radius: 10px;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  margin-top: 20px;
+}
+h2{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.column{
+  min-height: 300px;
+  min-width:400px;
+  text-align: center;
+}
+.column li{
+  list-style: none;
+  padding: 5px;
+}
+#savebutton{
+  border: #262525 1px solid;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+#savebutton:hover{
+  background-color: #f3f3f3;
+}
+
+.dropdown, input{
+border: #aeadad 1px solid;
+border-radius: 10px;
+width: fit-content;
+height: fit-content;
+padding: 5px;
 }

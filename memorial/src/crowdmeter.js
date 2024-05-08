@@ -42,9 +42,9 @@ function Crowdmeter() {
         },
         colorRange: {
             color: [
-                { minValue: "0", maxValue: "60", code: "#F2726F" },
+                { minValue: "0", maxValue: "60", code: "#62B58F" }, 
                 { minValue: "60", maxValue: "90", code: "#FFC533" },
-                { minValue: "90", maxValue: "120", code: "#62B58F" }
+                { minValue: "90", maxValue: "120", code: "#F2726F" }
             ]
         },
         dials: {
